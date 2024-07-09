@@ -8,7 +8,7 @@ async function getData () {
     let data = await fetchedData.json();
     console.log(data);
     adviceId.innerText = `ADVICE #${data.slip.id}`;
-    quote.innerText = `"${data.slip.advice}"`;
+    quote.innerText = data.slip.advice;
 };
 getData();
 dice.addEventListener('click',getData);
